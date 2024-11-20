@@ -8,7 +8,6 @@ plugins {
 group = 'com.example'
 apply plugin: 'war'
 
-
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(17)
@@ -27,16 +26,4 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-bootWar {
-    archiveBaseName = 'hgm' // 생성될 WAR 파일 이름
-    archiveVersion = '1.0.0'  // WAR 파일의 버전 (옵션)
-}
-
-
-tasks.withType(War) {
-    baseName = 'my-application'  // WAR 파일 이름 설정
-    version = '1.0.0'            // WAR 파일 버전 설정
-    destinationDirectory = file("${buildDir}/libs") // WAR 파일이 저장될 위치
 }
