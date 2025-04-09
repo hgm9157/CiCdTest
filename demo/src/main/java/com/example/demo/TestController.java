@@ -9,6 +9,7 @@ public class TestController {
     @GetMapping("/test")
     public String test(@RequestParam(value = "name", defaultValue = "World") String name) {
 		//test123
+		//feature2에서 작업
         return String.format("Test  %s!",name);
     }
 }
